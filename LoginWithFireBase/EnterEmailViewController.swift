@@ -56,12 +56,24 @@ class EnterEmailViewController : UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 8
         button.backgroundColor = .white
+        button.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        
+        nextButton.isEnabled = false
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        emailTextField.becomeFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+        
     }
     
 }
@@ -70,7 +82,7 @@ extension EnterEmailViewController {
     func setUp() {
         
         view.backgroundColor = .black
-        navigationController?.navigationBar.isHidden = false
+        
         view.addSubview(stackVeiw)
         
         stackVeiw.snp.makeConstraints {
@@ -97,7 +109,7 @@ extension EnterEmailViewController {
             $0.height.equalTo(40)
             
         }
-      
+        
         passwordLabel.snp.makeConstraints {
             $0.top.equalTo(emailTextField.snp.bottom).offset(20)
             $0.leading.equalTo(stackVeiw).inset(20)
@@ -120,4 +132,36 @@ extension EnterEmailViewController {
         
         
     }
+    
+    @objc func tapNextButton() {
+        print("next Button Tapped")
+    }
+    
+    
+}
+
+extension EnterEmailViewController: UITextFieldDelegate {
+   
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+           // Allow the text change
+           return true
+       }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let isEmailEmpty = emailTextField.text == ""
+        let isPasswordEmpty = passwordTextField.text == ""
+        
+        nextButton.isEnabled = !isEmailEmpty && !isPasswordEmpty
+        
+      
+    }
+    
+    
+    
 }
