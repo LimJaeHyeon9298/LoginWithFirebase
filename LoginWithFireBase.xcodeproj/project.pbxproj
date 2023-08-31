@@ -13,6 +13,7 @@
 		46FB0F5E2AA0636D00A09B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46FB0F5D2AA0636D00A09B69 /* Assets.xcassets */; };
 		46FB0F612AA0636D00A09B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46FB0F5F2AA0636D00A09B69 /* LaunchScreen.storyboard */; };
 		46FB0F6A2AA0691400A09B69 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46FB0F692AA0691400A09B69 /* SnapKit */; };
+		46FB0F6C2AA0A68700A09B69 /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB0F6B2AA0A68700A09B69 /* EnterEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		46FB0F5D2AA0636D00A09B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46FB0F602AA0636D00A09B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46FB0F622AA0636D00A09B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46FB0F6B2AA0A68700A09B69 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				46FB0F542AA0636B00A09B69 /* AppDelegate.swift */,
 				46FB0F562AA0636B00A09B69 /* SceneDelegate.swift */,
 				46FB0F582AA0636B00A09B69 /* LoginViewController.swift */,
+				46FB0F6B2AA0A68700A09B69 /* EnterEmailViewController.swift */,
 				46FB0F5D2AA0636D00A09B69 /* Assets.xcassets */,
 				46FB0F5F2AA0636D00A09B69 /* LaunchScreen.storyboard */,
 				46FB0F622AA0636D00A09B69 /* Info.plist */,
@@ -144,6 +147,7 @@
 			files = (
 				46FB0F592AA0636B00A09B69 /* LoginViewController.swift in Sources */,
 				46FB0F552AA0636B00A09B69 /* AppDelegate.swift in Sources */,
+				46FB0F6C2AA0A68700A09B69 /* EnterEmailViewController.swift in Sources */,
 				46FB0F572AA0636B00A09B69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

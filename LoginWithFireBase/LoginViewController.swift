@@ -51,6 +51,7 @@ class LoginViewController: UIViewController {
         let button = UIButton()
         button.setTitle("이메일/비밀번호로 계속하기", for: .normal)
         button.backgroundColor = .black
+        button.addTarget(self, action: #selector(touchEmailButton), for: .touchUpInside)
         return button
     }()
     
@@ -79,7 +80,7 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController {
-  
+    
     func setupUI() {
         navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .black
@@ -144,4 +145,13 @@ extension LoginViewController {
             $0.height.equalTo(40)
         }
     }
+    
+    @objc func touchEmailButton() {
+        
+        let vc = EnterEmailViewController()
+        
+        navigationController?.pushViewController(vc, animated: false)
+      //  present(vc, animated: true)
+    }
+    
 }
